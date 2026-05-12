@@ -16,6 +16,7 @@ print(greet("James"))
 
 #Task3 
 
+<<<<<<< HEAD
 def calc (x, y, z = None):
     if not isinstance (x, (int, float)) or not isinstance (y, (int, float)): 
         return "You can't multiply those values!"
@@ -33,6 +34,29 @@ def calc (x, y, z = None):
         return x * y
     if z is None :
         return x * y
+=======
+def calc (x, y, z = "multiply"):
+    try:   
+        if z == "add":
+            return x + y
+        elif z == "subtract":
+            return x - y
+        elif z == "modulo":
+            return x % y
+        elif z == "multiply":
+            return x * y
+        elif z == "divide":
+            return x/y
+        elif z == "power":
+            return x ** y
+        else:
+            return "Invalid operation!"
+    except ZeroDivisionError:
+        return "You can't divide by 0!"
+    except TypeError:
+        return "You can't multiply those values!"
+    
+>>>>>>> main
     
 print(calc(2,5,"add"))
 print(calc(20,5,"divide"))
@@ -73,7 +97,11 @@ def grade (*args):
     elif average >= 60:
         return "D" 
     else:
+<<<<<<< HEAD
         return "E"
+=======
+        return "F"
+>>>>>>> main
     
 
         
